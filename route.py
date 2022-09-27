@@ -1,23 +1,23 @@
-from turtle import *
+import turtle
 import random
 
 if __name__ == "__main__":
-    setup(1920, 1080)
-    width(1)
+    turtle.setup(1920, 1080)
+    turtle.width(1)
 
 def  route():
     hauteur_route = random.randint(100, 500)
-    up()
-    goto(-960, -540)
-    down()
-    color("black")
-    fillcolor("black")
-    begin_fill()
+    turtle.up()
+    turtle.goto(-960, -540)
+    turtle.down()
+    turtle.color("black")
+    turtle.fillcolor("black")
+    turtle.begin_fill()
     for i in range(2):
-        forward(1080*2)
-        left(90)
-        forward(hauteur_route)
-        left(90)
-    end_fill()
+        turtle.forward(1080*2)
+        turtle.left(90)
+        turtle.forward(hauteur_route)
+        turtle.left(90)
+    turtle.end_fill()
 
 route()
