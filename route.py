@@ -1,9 +1,6 @@
 from turtle import *
 import random
 
-if __name__ == "__main__":
-    setup(1920, 1080)
-    width(1)
 
 def  route():
     hauteur_route = random.randint(100, 500)
@@ -19,5 +16,3 @@ def  route():
         forward(hauteur_route)
         left(90)
     end_fill()
-
-route()
