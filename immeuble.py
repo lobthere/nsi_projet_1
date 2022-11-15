@@ -1,12 +1,12 @@
 from turtle import *
 from random import *
-hideturtle()
-def immeuble(largeur):
+
+def immeuble(largeur,nb):
     def facade():
         fillcolor("red")
         begin_fill()
         for i in range (2) :
-            forward(largeur)
+            forward(largeur*2)
             left(90)
             forward(largeur)
             left(90)
@@ -32,11 +32,37 @@ def immeuble(largeur):
             forward(largeur/5)
             left(180)
             down()
-            
+
         fenetre()
+        def fenetre2():
+            up()
+            forward(largeur+largeur/2)            
+            fillcolor("white")
+            forward(largeur/5)
+            left(90)
+            begin_fill()
+            forward(largeur/4)
+            right(90)
+            forward(largeur/6)
+            left(90)
+            forward(largeur/6)
+            left(90)
+            forward(largeur/6)
+            left(90)
+            forward(largeur/6)
+            end_fill()
+            forward(largeur/4)
+            left(270)
+            forward(largeur/2)
+            forward(largeur/2)
+            forward(largeur/2)
+            forward(largeur/5)
+            left(180)
+            down()
+        fenetre2()    
     facade()
     def porte():
-        forward(largeur/2)
+        forward(largeur)
         fillcolor("brown")
         begin_fill()
         left(90)
@@ -48,11 +74,11 @@ def immeuble(largeur):
         right(90)
         forward(largeur/4)
         end_fill()
-        forward(largeur/2)  
+        forward(largeur)  
         right(180) 
     porte()
     def nb_etages():
-            for nb_etages in range(2) :
+            for nb_etages in range(nb) :
                 left(90)
                 forward(largeur)
                 right(90)
@@ -61,6 +87,6 @@ def immeuble(largeur):
 
     return immeuble
 
-immeuble(100)
+immeuble(100,5)
 
 exitonclick()
