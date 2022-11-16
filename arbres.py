@@ -4,7 +4,17 @@ TREESIZEY = 370
 TREESIZEX = 50
 LEAVSSIZE = 250
 
-def arbres(treeSizeY, treeSizeX, leavesSize):
+def arbres(treeSizeY: int, treeSizeX: int, leavesSize: int):
+    '''
+    (fonction)
+    arbres : make a tree for you using turtle 
+    
+    (variables)
+    TreeSizeY  : the height of your trunk
+    TreeSizeX  : the size of your trunk
+    leavesSize : the size of your leavs
+    '''
+
     '''here is the trunk of the tree'''
     arbre.color("brown")
     arbre.fillcolor('brown')
@@ -36,4 +46,5 @@ def arbres(treeSizeY, treeSizeX, leavesSize):
         arbre.left(90)
     arbre.end_fill()
 
-arbres(TREESIZEY, TREESIZEX, LEAVSSIZE)
+if __name__ == "__main__":
+    arbres(TREESIZEY, TREESIZEX, LEAVSSIZE)
