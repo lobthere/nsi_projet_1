@@ -5,7 +5,6 @@ def voiture1():
     voiture.color('#008000')
     voiture.fillcolor('#008000')
     voiture.penup()
-    voiture.goto(0,0)
     voiture.begin_fill()
     voiture.forward(370)
     voiture.left(90)
