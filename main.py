@@ -1,4 +1,17 @@
 import turtle as t
-import route, arbres, voiture
+from route import route
+from arbres import arbres
+from voiture import voiture1
 
-arbres.arbre()
+SCREENSIZEY = 1920
+SCREENSIZEX = 1080
+HAUTEUROUTE = -100
+
+screen = t.Screen()
+screen.setup(SCREENSIZEY, SCREENSIZEX)
+route(SCREENSIZEX, SCREENSIZEY, HAUTEUROUTE)
+
+t.goto(HAUTEUROUTE, -100)
+arbres()
+
+t.exitonclick()

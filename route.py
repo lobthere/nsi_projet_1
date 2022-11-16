@@ -48,6 +48,10 @@ def route(screenSizeX, screenSizeY, hauteurRoute):
     t.forward(HAUTEURTRAITS * 2 + 400)
     rectangle()
 
+    t.penup()
+    t.goto(HAUTEUROUTE, 0)
+    t.pendown()
+
 
 if __name__ == "__main__":
     screen = t.Screen()
