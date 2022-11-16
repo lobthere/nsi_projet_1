@@ -19,9 +19,7 @@ screen = t.Screen()
 screen.setup(SCREENSIZEY, SCREENSIZEX)
 route(SCREENSIZEX, SCREENSIZEY, HAUTEUROUTE)
 
-t.goto(HAUTEUROUTE, -500)
+t.goto(HAUTEUROUTE, -100)
 arbres(TREESIZEY, TREESIZEX, LEAVSSIZE)
 
 t.exitonclick()
-
-"""modules effectuer par """
