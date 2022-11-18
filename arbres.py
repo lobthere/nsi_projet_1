@@ -1,3 +1,9 @@
+'''
+ATTENTION
+
+Ce fichier n as pas été fait par moi mais par Jiovany. Je l ai seulement modifier afin de pouvoir le modifier et qu il soit implementable n importe ou.
+'''
+
 import turtle as arbre
 
 TREESIZEY = 370
