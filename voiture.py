@@ -1,9 +1,12 @@
 import turtle as voiture
  
-def voiture1():
+def voiture1(color: int):
+
+    voiture.colormode(255)
+
     # Code pour créer le fuselage de la voiture
-    voiture.color('#008000')
-    voiture.fillcolor('#008000')
+    voiture.color(color)
+    voiture.fillcolor(color)
     voiture.penup()
     voiture.begin_fill()
     voiture.forward(370)
@@ -14,11 +17,15 @@ def voiture1():
     voiture.left(90)
     voiture.forward(50)
     voiture.end_fill()
+    voiture.left(90)
     
     
     # Code pour créer les fenêtres de cette dernière
     voiture.penup()
-    voiture.goto(100, 50)
+    voiture.left(90)
+    voiture.forward(50)
+    voiture.right(90)
+    voiture.forward(100)
     voiture.pendown()
     voiture.setheading(45)
     voiture.forward(70)
@@ -28,25 +35,28 @@ def voiture1():
     voiture.forward(70)
     voiture.setheading(90)
     voiture.penup()
-    voiture.goto(200, 50)
+    voiture.right(90)
+    voiture.forward(-100)
     voiture.pendown()
-    voiture.forward(49.50)
-    
+    voiture.left(90)
+    voiture.forward(49.50)    
     
     # Code pour créer les roues de cette automobile
     voiture.penup()
-    voiture.goto(100, -10)
+    voiture.forward(-108.99)
+    voiture.right(90)
+    voiture.forward(-1 * (99.5 + 10))
     voiture.pendown()
-    voiture.color('#000000')
-    voiture.fillcolor('#000000')
+    voiture.color("red")
+    voiture.fillcolor("red")
     voiture.begin_fill()
     voiture.circle(20)
     voiture.end_fill()
     voiture.penup()
-    voiture.goto(300, -10)
+    voiture.forward(300 - 89.49)
     voiture.pendown()
-    voiture.color('#000000')
-    voiture.fillcolor('#000000')
+    voiture.color("red")
+    voiture.fillcolor("red")
     voiture.begin_fill()
     voiture.circle(20)
     voiture.end_fill()

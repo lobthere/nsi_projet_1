@@ -1,7 +1,21 @@
 import turtle as t
+from random import randint, random
 from route import route
 from arbres import arbres
 from immeuble import immeuble
+from case_creole import case
+from voiture import voiture1
+
+"""Init"""
+t.hideturtle()
+t.tracer(0, 0)
+t.title("Une rue de point a pitre")
+r = randint(1, 2)
+if r == 1:
+    t.bgpic("jour.png")
+elif r == 2:
+    t.bgpic("nuit.png")
+COLOR = [0, 0, 0]
 
 """About the Screen"""
 SCREENSIZEY = 1920
@@ -15,26 +29,74 @@ SCREENMAXUP = SCREENSIZEX / 2
 HAUTEUROUTE = -100
 
 """About the Tree"""
-TREESIZEY = 370
-TREESIZEX = 50
-LEAVSSIZE = 250
+TREESIZEY = 100
+TREESIZEX = 20
+LEAVSSIZE = 50
+NUMBER_OF_TREES = 6
 
 """About the Building"""
 SCREEN_SIZE_BUILDING_X = 100
 NUMBEROFETAGES = 2
+COLOR_FACADE = [0, 0, 0]
+COLOR_WINDOW1 = [0, 0, 0]
+COLOR_WINDOW2 = [0, 0, 0]
+
+"""About the Case"""
+CASESIZE = 100
+ROOFSIZE = 50
+COLOR_CASE = [0, 0, 0]
+
+"""About the Car"""
+COLOR_CAR = [0, 0, 0]
+
+"""The fonctions"""
+def immeuble_in_main():
+    NUMBEROFETAGES = randint(2, 4)
+    COLOR_FACADE = choose_color(COLOR)
+    COLOR_WINDOW1 = choose_color(COLOR)
+    COLOR_WINDOW2 = choose_color(COLOR)
+    immeuble(SCREEN_SIZE_BUILDING_X, NUMBEROFETAGES, COLOR_FACADE, COLOR_WINDOW1, COLOR_WINDOW2)
+
+def arbre_in_main():
+    t.goto(SCREENMAXRIGHT, HAUTEUROUTE - 30)
+    for i in range(0, NUMBER_OF_TREES, 1):
+        t.forward(randint(LEAVSSIZE + 100, LEAVSSIZE + 500) )
+        t.pendown()
+        arbres(TREESIZEY, TREESIZEX, LEAVSSIZE)
+        t.penup()
+
+def choose_color(color):
+    color = [randint(0, 255), randint(0, 255), randint(0, 255)]
+    return color
 
 screen = t.Screen()
 screen.setup(SCREENSIZEY, SCREENSIZEX)
 route(SCREENSIZEX, SCREENSIZEY, HAUTEUROUTE)
 
-t.penup()
-t.goto(HAUTEUROUTE, -100)
-t.pendown()
-arbres(TREESIZEY, TREESIZEX, LEAVSSIZE)
+"""The build"""
 
 t.penup()
 t.goto(SCREENMAXRIGHT, HAUTEUROUTE)
 t.pendown()
-immeuble(SCREEN_SIZE_BUILDING_X, NUMBEROFETAGES)
+t.color("black")
+random = 0
+while (t.pos()[0]) < SCREENMAXLEFT:
+    random = randint(1, 2)
+    COLOR_CASE = choose_color(COLOR)
+    if random == 1:
+        immeuble_in_main()
+        t.forward(SCREEN_SIZE_BUILDING_X * 2)
+    elif random == 2:
+        case(CASESIZE, ROOFSIZE, COLOR_CASE)
+        t.forward(CASESIZE)
+    print(t.pos()[0])
 
-t.exitonclick()
+t.penup()
+arbre_in_main()
+
+t.goto(randint(-800, 800), HAUTEUROUTE - 300)
+COLOR_CAR = choose_color(COLOR)
+voiture1(COLOR_CAR)
+
+
+t.exitonclick();

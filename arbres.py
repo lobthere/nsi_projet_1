@@ -1,14 +1,4 @@
-'''
-ATTENTION
-
-Ce fichier n as pas été fait par moi mais par Jiovany. Je l ai seulement modifier afin de pouvoir le modifier et qu il soit implementable n importe ou.
-'''
-
 import turtle as arbre
-
-TREESIZEY = 370
-TREESIZEX = 50
-LEAVSSIZE = 250
 
 def arbres(treeSizeY: int, treeSizeX: int, leavesSize: int):
     '''
@@ -22,6 +12,7 @@ def arbres(treeSizeY: int, treeSizeX: int, leavesSize: int):
     '''
 
     '''here is the trunk of the tree'''
+    position = [arbre.pos()[0], arbre.pos()[1]]
     arbre.color("brown")
     arbre.fillcolor('brown')
     arbre.penup()
@@ -43,14 +34,21 @@ def arbres(treeSizeY: int, treeSizeX: int, leavesSize: int):
     """here we turn"""
     arbre.forward(treeSizeY * -1)
     arbre.left(90)
-    arbre.forward(((leavesSize - treeSizeX) / 2) * -1)
+    arbre.forward(treeSizeX/2)
+    arbre.right(90)
+    arbre.forward(treeSizeX/2)
+    arbre.left(90)
+    arbre.pendown()
+    arbre.begin_fill()
+    arbre.circle(leavesSize)
+    arbre.end_fill()
+    arbre.penup()
+    arbre.goto(position[0], position[1])
+    arbre.forward(treeSizeX / 2)
     arbre.pendown()
 
-    arbre.begin_fill()
-    for i in range(4):
-        arbre.forward(leavesSize)
-        arbre.left(90)
-    arbre.end_fill()
-
 if __name__ == "__main__":
+    TREESIZEY = 370
+    TREESIZEX = 50
+    LEAVSSIZE = 100
     arbres(TREESIZEY, TREESIZEX, LEAVSSIZE)

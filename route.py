@@ -1,10 +1,6 @@
 import random
 import turtle as t
 
-SCREENSIZEX = 1080
-SCREENSIZEY = 1920
-HAUTEUROUTE = -100
-
 def route(screenSizeX, screenSizeY, hauteurRoute):
     SCREENMAXRIGHT = (screenSizeY / 2) * -1
     SCREENMAXDOWN = (screenSizeX / 2) * -1
@@ -49,12 +45,25 @@ def route(screenSizeX, screenSizeY, hauteurRoute):
         t.forward(HAUTEURTRAITS * 2 + 400)
         rectangle()
 
+    t.color("grey")
+    t.fillcolor("grey")
+    t.begin_fill()
+    t.goto(SCREENMAXLEFT, HAUTEUROUTE)
+    t.goto(SCREENMAXLEFT, HAUTEUROUTE - 30)
+    t.goto(SCREENMAXRIGHT, HAUTEUROUTE - 30)
+    t.goto(SCREENMAXRIGHT, HAUTEUROUTE)
+    t.goto(SCREENMAXLEFT, HAUTEUROUTE)
+    t.end_fill()
+
     t.penup()
     t.goto(HAUTEUROUTE, 0)
     t.pendown()
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":   
+    SCREENSIZEX = 1080
+    SCREENSIZEY = 1920
+    HAUTEUROUTE = -100
     screen = t.Screen()
     print(t.pos()[0])
     screen.setup(SCREENSIZEY, SCREENSIZEX)
