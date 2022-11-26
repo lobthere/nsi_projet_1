@@ -5,16 +5,13 @@ from arbres import arbres
 from immeuble import immeuble
 from case_creole import case
 from voiture import voiture1
+import time
 
 """Init"""
+t.bgpic("a/0 (1).png")
+t.speed(100000000000)
 t.hideturtle()
-t.tracer(0, 0)
 t.title("Une rue de point a pitre")
-r = randint(1, 2)
-if r == 1:
-    t.bgpic("jour.png")
-elif r == 2:
-    t.bgpic("nuit.png")
 COLOR = [0, 0, 0]
 
 """About the Screen"""
@@ -97,6 +94,10 @@ arbre_in_main()
 t.goto(randint(-800, 800), HAUTEUROUTE - 300)
 COLOR_CAR = choose_color(COLOR)
 voiture1(COLOR_CAR)
-
-
-t.exitonclick();
+number = 0
+while number != 119:
+    number = number + 1
+    t.bgpic(f"a/0 ({number}).png")
+    screen.update()
+    time.sleep(0.1)
+t.exitonclick()
