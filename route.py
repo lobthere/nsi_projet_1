@@ -65,7 +65,6 @@ if __name__ == "__main__":
     SCREENSIZEY = 1920
     HAUTEUROUTE = -100
     screen = t.Screen()
-    print(t.pos()[0])
     screen.setup(SCREENSIZEY, SCREENSIZEX)
     route(SCREENSIZEX, SCREENSIZEY, HAUTEUROUTE)
     t.exitonclick()

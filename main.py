@@ -8,7 +8,7 @@ from voiture import voiture1
 import time
 
 """Init"""
-t.bgpic("a/0 (1).png")
+t.bgpic("test/0 (1).png")
 t.speed(100000000000)
 t.hideturtle()
 t.title("Une rue de point a pitre")
@@ -86,7 +86,6 @@ while (t.pos()[0]) < SCREENMAXLEFT:
     elif random == 2:
         case(CASESIZE, ROOFSIZE, COLOR_CASE)
         t.forward(CASESIZE)
-    print(t.pos()[0])
 
 t.penup()
 arbre_in_main()
@@ -95,9 +94,9 @@ t.goto(randint(-800, 800), HAUTEUROUTE - 300)
 COLOR_CAR = choose_color(COLOR)
 voiture1(COLOR_CAR)
 number = 0
-while number != 119:
+while number != 587:
     number = number + 1
-    t.bgpic(f"a/0 ({number}).png")
+    t.bgpic(f"test/0 ({number}).png")
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.03)
 t.exitonclick()
