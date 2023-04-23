@@ -19,5 +19,3 @@ def toit(taille: int, couleur):
         right(-120)
         c = c +1
     end_fill()
-
-toit(100,"red")
