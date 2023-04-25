@@ -1,2 +1,2 @@
-Ici vous pouvez retrouvez l avancement de notre projet de creation d une rue de point a pitre.<br>
-projet co-crée par :<br>-Lobthere<br>-Natsu97122<br>-Jiovanille
+Ici vous pouvez retrouvez l avancement de notre projet Un jour en ville<br>
+projet co-crée par :<br>-Landreau Léopold<br>-Racon Allen<br>-Malard Jiovany
