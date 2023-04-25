@@ -11,7 +11,7 @@ import time
 t.bgpic("test/0 (1).png")
 t.speed(100000000000)
 t.hideturtle()
-t.title("Une rue de point a pitre")
+t.title("Un jour une ville")
 COLOR = [0, 0, 0]
 
 """About the Screen"""
