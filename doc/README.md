@@ -7,3 +7,5 @@ Il vous suffit d'installer les modules turtle, time et random, normalement deja 
 
 
 Pour ce qui est de la documentation, vous pourrez trouver celle-ci directement sur les fichiers, en commentaire.
+
+Si vous voulez un avancement potentiel du projet vous pouvez le consultez sur le github : https://github.com/lobthere/nsi_projet_1
