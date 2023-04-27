@@ -1,8 +1,8 @@
 import random
 import turtle as t
 
-def route(screenSizeX, screenSizeY, hauteurRoute):
-    SCREENMAXRIGHT = (screenSizeY / 2) * -1
+def route(screenSizeX: int, screenSizeY: int, hauteurRoute: int):
+    SCREENMAXRIGHT = (screenSizeY / 2) * -1                             #on cree les constantes qui nous serons utiles pour plus tard
     SCREENMAXDOWN = (screenSizeX / 2) * -1
     SCREENMAXLEFT = screenSizeY / 2
     SCREENMAXUP = screenSizeX / 2
@@ -10,7 +10,7 @@ def route(screenSizeX, screenSizeY, hauteurRoute):
     HAUTEURTRAITS = 30
     HAUTEUROUTE = hauteurRoute
 
-    def rectangle():
+    def rectangle():                                                    #on cree la fonction pour faire les bandes de la route
         t.color("white")
         t.fillcolor("white")
         t.begin_fill()
@@ -21,7 +21,7 @@ def route(screenSizeX, screenSizeY, hauteurRoute):
             t.left(90)
         t.end_fill()
 
-    t.up()
+    t.up()                                                              #on cree le rectangle noir qui nous sert de route
     t.goto(0,HAUTEUROUTE)
     t.down()
     t.goto(SCREENMAXRIGHT, HAUTEUROUTE)
@@ -33,7 +33,7 @@ def route(screenSizeX, screenSizeY, hauteurRoute):
     t.goto(SCREENMAXRIGHT, HAUTEUROUTE)
     t.end_fill()
 
-    t.penup()
+    t.penup()                                                           #on cree les bandes blanches 
     t.right(90)
     t.forward(((HAUTEUROUTE + SCREENMAXDOWN) / 2 + 100) * -1)
     t.left(90)
@@ -45,7 +45,7 @@ def route(screenSizeX, screenSizeY, hauteurRoute):
         t.forward(HAUTEURTRAITS * 2 + 400)
         rectangle()
 
-    t.color("grey")
+    t.color("grey")                                                     #on cree le trotoire de la route
     t.fillcolor("grey")
     t.begin_fill()
     t.goto(SCREENMAXLEFT, HAUTEUROUTE)
@@ -60,7 +60,7 @@ def route(screenSizeX, screenSizeY, hauteurRoute):
     t.pendown()
 
 
-if __name__ == "__main__":   
+if __name__ == "__main__":                              #on essaye si jamais on est pas dans un autre fichier
     SCREENSIZEX = 1080
     SCREENSIZEY = 1920
     HAUTEUROUTE = -100

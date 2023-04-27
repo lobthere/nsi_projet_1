@@ -6,14 +6,14 @@ def arbres(treeSizeY: int, treeSizeX: int, leavesSize: int):
     arbres : make a tree for you using turtle 
     
     (variables)
-    TreeSizeY  : the height of your trunk
-    TreeSizeX  : the size of your trunk
+    treeSizeY  : the height of your trunk
+    treeSizeX  : the size of your trunk
     leavesSize : the size of your leavs
     '''
 
     '''here is the trunk of the tree'''
-    position = [arbre.pos()[0], arbre.pos()[1]]
-    arbre.color("brown")
+    position = [arbre.pos()[0], arbre.pos()[1]]                                     #on sauvegarde la position actuel de l'arbre
+    arbre.color("brown")                                                            #on cree le tronc
     arbre.fillcolor('brown')
     arbre.penup()
     arbre.begin_fill()
@@ -26,7 +26,7 @@ def arbres(treeSizeY: int, treeSizeX: int, leavesSize: int):
     arbre.forward(treeSizeY)
     arbre.end_fill()
 
-    '''Here are the leaves of the tree'''
+    '''Here are the leaves of the tree'''                                           #on cree les feuilles
     arbre.color('green')
     arbre.fillcolor('green')
     arbre.penup()
@@ -43,11 +43,11 @@ def arbres(treeSizeY: int, treeSizeX: int, leavesSize: int):
     arbre.circle(leavesSize)
     arbre.end_fill()
     arbre.penup()
-    arbre.goto(position[0], position[1])
+    arbre.goto(position[0], position[1])                                            #on retourne a la position sauvegarder au paravant
     arbre.forward(treeSizeX / 2)
     arbre.pendown()
 
-if __name__ == "__main__":
+if __name__ == "__main__":                                                          #permet d'essayer le programme avec des valeurs par default 
     TREESIZEY = 370
     TREESIZEX = 50
     LEAVSSIZE = 100
