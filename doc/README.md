@@ -4,3 +4,6 @@ projet co-crée par :<br>-Landreau Léopold<br>-Racon Allen<br>-Malard Jiovany
 Vous trouverez ici les protocoles de lancement.
 
 Il vous suffit d'installer les modules turtle, time et random, normalement deja présent, et de lancer le fichier main.py
+
+
+Pour ce qui est de la documentation, vous pourrez trouver celle-ci directement sur les fichiers, en commentaire.

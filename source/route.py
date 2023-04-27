@@ -2,6 +2,15 @@ import random
 import turtle as t
 
 def route(screenSizeX: int, screenSizeY: int, hauteurRoute: int):
+    """
+    (fonction)
+    route: create the road
+
+    (variables)
+    screenSizeX: the size of your screen in X in turtle
+    screenSizeY: the size of your screen in Y in turtle
+    hauteurRoute: the heigh of the road
+    """
     SCREENMAXRIGHT = (screenSizeY / 2) * -1                             #on cree les constantes qui nous serons utiles pour plus tard
     SCREENMAXDOWN = (screenSizeX / 2) * -1
     SCREENMAXLEFT = screenSizeY / 2

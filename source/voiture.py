@@ -1,7 +1,13 @@
 import turtle as t
  
-def voiture1(color: int):
+def voiture1(color: list):
+    """
+    (fonction)
+    voiture1: create the car 
 
+    (variables)
+    color: choose the color for the car, need to be a list [color1, color2, color3]
+    """
     t.colormode(255)
 
     # Code pour créer le fuselage de la voiture
